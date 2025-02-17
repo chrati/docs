@@ -1,5 +1,6 @@
 ---
 title: Details
+parent: Test
 nav_order: 2
 ---
 
