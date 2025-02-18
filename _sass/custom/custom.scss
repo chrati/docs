@@ -1,1 +1,5 @@
 // custom SCSS (or CSS) goes here
+.nav-list .nav-list-item .nav-list-link,
+.nav-list .nav-list-item .nav-list-link.active   {
+  color: #999999;
+}
