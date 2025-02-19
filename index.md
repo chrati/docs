@@ -70,6 +70,31 @@ email, or any other method with the owners of this repository before making a ch
 {% endfor %}
 </ul>
 
+<ul class="list-style-none">
+{% for issues in site.github.contributors %}
+  <li class="d-inline-block mr-1">
+     <a href="{{ issues.html_url }}">abc</a>
+  </li>
+{% endfor %}
+</ul>
+
+<ul class="list-style-none">
+  {% assign issue_ids = "2, 3" | split: ", " %}  <!-- Hier kannst du eine Liste von Issue-IDs angeben -->
+  {% assign issues = site.data.github-issues %}
+  
+  {% for issue in issues %}
+    {% if issue_ids contains issue.id | string %}
+      <li class="d-inline-block mr-1">
+        <a href="{{ issue.html_url }}" target="_blank" rel="noopener noreferrer">
+          {{ issue.title }}
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+
+
 ### Code of Conduct
 
 Just the Docs is committed to fostering a welcoming community.
