@@ -7,7 +7,7 @@ module Jekyll
   class GithubIssuesGenerator < Jekyll::Generator
     DATA_FILE = '_data/github-issues.json'.freeze
     GITHUB_API_HOST = 'api.github.com'.freeze
-    ISSUES_URL = '/search/issues?q=author:%s&per_page=100&page=%i'.freeze  # Geändert: Suche nach Issues
+    ISSUES_URL = '/search/issues?q=is:issue+is:open&per_page=100&page=%i'.freeze # Geändert: Suche nach Issues
 
     def generate(site)
       settings = {
