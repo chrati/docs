@@ -79,7 +79,7 @@ email, or any other method with the owners of this repository before making a ch
 </ul>
 
 <ul class="list-style-none">
-  {% assign issue_ids = "123, 456, 789" | split: ", " %}  <!-- Definiere die Issue-IDs direkt -->
+  {% assign issue_ids = "2, 3" | split: ", " %}  <!-- Definiere die Issue-IDs direkt -->
   {% assign issues = site.data.github-issues %}
 
   {% for issue in issues %}
