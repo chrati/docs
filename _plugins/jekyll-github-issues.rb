@@ -1,3 +1,7 @@
+require 'jekyll'
+require 'net/http'
+require 'json'
+
 module Jekyll
   # Generates a GitHub issues data file
   class GithubIssuesGenerator < Jekyll::Generator
