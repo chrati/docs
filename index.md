@@ -71,14 +71,6 @@ email, or any other method with the owners of this repository before making a ch
 </ul>
 
 <ul class="list-style-none">
-{% for issues in site.github.contributors %}
-  <li class="d-inline-block mr-1">
-     <a href="{{ issues.html_url }}">abc</a>
-  </li>
-{% endfor %}
-</ul>
-
-<ul class="list-style-none">
   {% assign issue_ids = "2, 3" | split: ", " %}  <!-- Definiere die Issue-IDs direkt -->
   {% assign issues = site.data.github-issues %}
 
