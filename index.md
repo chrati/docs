@@ -72,7 +72,7 @@ email, or any other method with the owners of this repository before making a ch
 
 <ul class="list-style-none">
   {% assign issue_ids = "2, 3" | split: "," | map: "strip" %}  <!-- Entferne Leerzeichen und teile die Issue-IDs -->
-  {% assign issues = site.github-issues %}
+  {% assign issues = site.data.github-issues %}
 
   {% if issues.size > 0 %}
     {% for issue in issues %}
