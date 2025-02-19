@@ -79,11 +79,12 @@ email, or any other method with the owners of this repository before making a ch
 </ul>
 
 <ul class="list-style-none">
-  {% assign issue_ids = "2, 3" | split: ", " %}  <!-- Hier kannst du eine Liste von Issue-IDs angeben -->
+  {% assign issue_ids = "123, 456, 789" | split: ", " %}  <!-- Definiere die Issue-IDs direkt -->
   {% assign issues = site.data.github-issues %}
-  
+
   {% for issue in issues %}
-    {% if issue_ids contains issue.id | string %}
+    {% assign issue_id_string = issue.id | string %}
+    {% if issue_ids contains issue_id_string %}
       <li class="d-inline-block mr-1">
         <a href="{{ issue.html_url }}" target="_blank" rel="noopener noreferrer">
           {{ issue.title }}
@@ -92,6 +93,7 @@ email, or any other method with the owners of this repository before making a ch
     {% endif %}
   {% endfor %}
 </ul>
+
 
 
 
